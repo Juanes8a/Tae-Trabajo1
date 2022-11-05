@@ -12,7 +12,7 @@ st.title("Findool")
 st.subheader("¡Bienvenido!")
 st.write("La elección de una institución de educación superior es una de las más importantes que se pueda tomar, es el lugar donde se empieza, afianza o se reconstruye nuestras prioridades y nuestro estilo de vida. Por tal motivo se ofrece esta aplicación con la finalidad de ayudar a esta persona que está en búsqueda de una institución de educación superior y que cumpla con algunos criterios que son indispensables en su elección.")
 st.subheader("¿Para quién va dirigida?")
-st.write("Esta aplicación está dirigida para bachilleres que deseen continuar sus estudios en instituciones de educación superior.")
+st.write("Esta aplicación está dirigida para bachilleres que deseen continuar sus estudios en instituciones de educación superior de Estados Unidos.")
 st.subheader("¿Cómo funciona?")
 st.write("Después de esta explicación encontrarás una serie de criterios, los cuales te pediremos que analices y los ajustes de acuerdo a tus intereses y/o necesidades. Estos filtros que abarcan ámbitos como:")
 mark = """
