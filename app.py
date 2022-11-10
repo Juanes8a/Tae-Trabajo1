@@ -18,7 +18,7 @@ st.write("Después de esta explicación encontrarás una serie de criterios, los
 mark = """
 * Económico: Costo promedio de la institución. 
 * Geográfico: Búsqueda en un estado en particular o en todo el país. 
-* Educativo: Puntuación en SAT, Tasa de admisiones, interes en intersemestrales, índice en becasPell y préstamos federales.
+* Educativo: Puntuación en SAT, Tasa de admisiones, índice en becasPell y préstamos federales.
 """
 col1, col2 = st.columns(2)
 
@@ -111,7 +111,7 @@ if st.button("Buscar instituciones educativas"):
     else:
         nombres = ["INSTNM","STABBR","NPT4_PUB","SAT_AVG_ALL","ADM_RATE_ALL","PCTPELL","PCTFLOAN"]
     depurados = seleccionados[nombres]
-    depurados.columns = ["Nombre","Estado","Costo promedio","Puntaje SAT promedio","Tasa de admisión","Porcentaje Becas Pell","Porcentaje préstamos federales"]
+    depurados.columns = ["Nombre de la institución","Estado","Costo promedio","Puntaje SAT promedio","Tasa de admisión","Porcentaje Becas Pell","Porcentaje préstamos federales"]
     depurados.reset_index(drop=True, inplace=True)
     st.dataframe(depurados)
     st.map(seleccionados)
