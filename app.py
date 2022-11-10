@@ -28,7 +28,7 @@ with col1:
 with col2:
    st.image("estudiante.png")
 
-st.write("Luego de ajustar los filtros a tus preferencias le das en aplicar y en el recuadro inferior te aparecerá tu recuadro de resultado con 5 recomendaciones de instituciones, sus respectivas ubicaciones y un párrafo de las características en común de este grupo de 5 instituciones.")
+st.write("Luego de ajustar los filtros a tus preferencias le das en aplicar y en el recuadro inferior te aparecerá tu recuadro de resultado con 10 recomendaciones de instituciones y sus respectivos atributos.")
 
 
 
