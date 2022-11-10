@@ -68,30 +68,24 @@ opcion_ordenar = st.selectbox(
 diccionario_orden = {'Costo':("NPT4_PRIV","NPT4_PUB"),'Puntaje SAT':"SAT_AVG_ALL", 'Tasa de Admisión':"ADM_RATE_ALL"}
 
 def ordenar (df):
-    #st.dataframe(df.head(10))  DATOS SIN ORDENAR DE ACUERDO A PARAMETRO
-    if orden == 'Puntaje SAT':
+    if opcion_ordenar == 'Puntaje SAT':
         final_df = df.nsmallest(10, ['SAT_AVG_ALL'])
         return final_df
-        #final_df = df.sort_values(by=["SAT_AVG_ALL"])
-        #return final_df.head(10)
+
         
-    elif  orden == 'Tasa de Admisión':
+    elif  opcion_ordenar == 'Tasa de Admisión':
         final_df = df.nlargest(10, 'ADM_RATE_ALL')
         return final_df
-        #final_df = df.sort_values(by=["ADM_RATE_ALL"], ascending=False)
-        #return final_df.head(10)
         
-    elif orden == 'Costo' and terminOption == "Privada":
+    elif opcion_ordenar == 'Costo' and terminOption == "Privada":
         final_df = df.nsmallest(10, 'NPT4_PRIV')
         return final_df
-        #final_df = df.sort_values(by=["NPT4_PRIV"])
-        #return final_df.head(10)
+
         
     else:
         final_df = df.nsmallest(10, 'NPT4_PUB')
         return final_df
-        #final_df = df.sort_values(by=["NPT4_PUB"])
-        #return final_df.head(10) 
+
         
     
 def top ():
