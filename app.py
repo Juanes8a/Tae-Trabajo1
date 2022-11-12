@@ -42,11 +42,11 @@ priceSlider = st.slider("Costo máximo de la institución ",
 
 # : Porcentaje préstamos en institucion
 loanSlider = st.slider("¿Qué porcentaje de préstamos federales como mínimo te interesa que hayan en la institución?",
-                          min_value=0.0, max_value=1.0, step=0.05)
+                          min_value=0, max_value=100, step=1)
 
 # : Porcentaje Pell en institucion
 pellSlider = st.slider("¿Qué porcentaje de becas Pell como mínimo te interesa que hayan en la institución?",
-                          min_value=0.0, max_value=1.0, step=0.05)
+                          min_value=0, max_value=100, step=1)
 
 #Puntaje SAT
 sat = st.number_input('Escribe por favor tu puntaje SAT')
@@ -90,8 +90,8 @@ def ordenar (df):
     
 def top ():
     filtrado = dat[(dat["ADM_RATE_ALL"] <= 1)
-             & (dat["PCTFLOAN"]>= loanSlider) 
-             & (dat["PCTPELL"]>= pellSlider)
+             & (dat["PCTFLOAN"]>= (loanSlider/100)) 
+             & (dat["PCTPELL"]>= (pellSlider/100))
              & (dat["SAT_AVG_ALL"]<=sat)]
     if terminOption == "Privada":
         filtrado2 = filtrado[filtrado["NPT4_PRIV"]<=priceSlider]
